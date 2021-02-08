@@ -1,0 +1,52 @@
+body{
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  background-color: #002;
+  line-height: 0;
+}
+
+body > span {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: 2s;
+  color: #f00;
+  overflow: visible;
+}
+
+body > span > span{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  box-shadow:
+  0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px,
+  0 0 70px, 0 0 90px, 0 0 110px, 0 0 130px, 0 0 150px;
+  border-radius: 50%;
+  background-color: #f00;
+  height: var(--dot-size);
+  width: var(--dot-size);
+  transform: scale(0.01);
+  transition: 2s;
+}
+
+body > span:before{
+  content: '';
+  display: block;
+  position: relative;
+  height: var(--dot-height);
+  width: var(--dot-width);
+  border-radius: 50%;
+}
+
+body > span:hover > span{
+  transform: scale(0.5);
+  transition: 0s;
+}
+
+*{
+  z-index: inherit;
+  overflow: hidden;
+  cursor: none;
+}
