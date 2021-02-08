@@ -12,7 +12,7 @@ body > span {
   margin: 0;
   padding: 0;
   transition: 2s;
-  color: #f00;
+  color: #0f0;
   overflow: visible;
 }
 
@@ -22,13 +22,24 @@ body > span > span{
   left: 0%;
   box-shadow:
   0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px,
-  0 0 70px, 0 0 90px, 0 0 110px, 0 0 130px, 0 0 150px;
+  0 0 60px, 0 0 70px, 0 0 80px, 0 0 90px, 0 0 100px,
+  0 0 110px, 0 0 120px, 0 0 130px, 0 0 140px, 0 0 150px;
   border-radius: 50%;
-  background-color: #f00;
+  background-color: #0f0;
   height: var(--dot-size);
   width: var(--dot-size);
   transform: scale(0.01);
   transition: 2s;
+  animation: changeColor 10s linear infinite;
+}
+
+@keyframes changeColor{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }
 
 body > span:before{
