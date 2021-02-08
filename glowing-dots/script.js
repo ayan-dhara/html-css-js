@@ -3,10 +3,6 @@ const createElement = (tag) => {
   return document.createElement(tag);
 }
 
-const setDisplayMatrix = () => {
-  
-}
-
 const setDisplay = (dotCount) => {
   console.log(dotCount);
   body.innerHTML = '';
