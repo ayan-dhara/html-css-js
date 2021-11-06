@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #010124 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+body .radiation {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transform: translate(0, -40px) rotateX(50deg);
+  animation: radiate-move var(--timer) ease-out forwards;
+}
+@keyframes radiate-move {
+  from {
+    transform: translate(0) rotateX(0);
+  }
+}
+body .radiation .sub-radiation {
+  height: 10px;
+  width: 0;
+  background: var(--color);
+  transform: rotate(var(--angle)) translate(100px) rotate(90deg);
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 0 5px yellow;
+  animation: radiate var(--timer) ease-out forwards;
+}
+@keyframes radiate {
+  from {
+    height: 1px;
+    width: 3px;
+    opacity: 1;
+    box-shadow: 0 0 0;
+    transform: rotate(var(--angle)) translate(0) rotate(90deg);
+  }
+}
